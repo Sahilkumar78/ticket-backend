@@ -222,7 +222,7 @@ const sendOtp = asyncHandler(async (req, res) => {
         
         return res
             .status(201)
-            .json(new ApiResponse(201, { email }, "OTP sent successfully"));
+            .json(new ApiResponse(201, { email, otp }, "OTP sent successfully"));
    
     } catch (error) {
         console.error("Error while sending email:", error);
